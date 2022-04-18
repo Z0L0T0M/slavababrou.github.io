@@ -1,0 +1,23 @@
+<main class='main'>
+  <div class="main__form">
+    <div class="main__form_wrapper">
+      <label class='label' for="title">title</label>
+      <input [(ngModel)]="title" class ='input main__form_wrapper_title-input'
+       type="text" name='title'>
+
+      <label class='label' for="text">Text</label>
+      <input [(ngModel)]='text' class ='input main__form_wrapper_text-input'
+       type="text" name='text'>
+
+      <button (click)='addPost()' class='button main__form_wrapper_btn'>add</button>
+    </div>
+
+    <div class="main__form_clear">
+      <button (click) = 'clearPosts()' class='button main__form_clear_btn'>Delete all posts</button>
+    </div>
+  </div>
+  
+  <div class="main__table">
+    <app-table [posts]='posts'></app-table>
+  </div>
+</main>

@@ -1,0 +1,14 @@
+<div class="post" *ngFor='let post of posts; let index = index'>
+    <div class="post__info">
+        <p class='post__info_title'>{{post.title}}</p>
+        <div class="post__info_wrapper">
+            <p class='post__info_date'>{{date | date}}</p>
+            <button class='button post__info_btn' (click)="deletePost(index)" class='button'>Delete</button>
+        </div>
+        
+    </div>
+
+    <div class="post__text">
+        <p>{{post.text}}</p>
+    </div>
+</div>
